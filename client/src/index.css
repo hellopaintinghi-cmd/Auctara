@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  body {
+    @apply bg-obsidian text-text font-body;
+    font-size: 15px;
+  }
+  ::-webkit-scrollbar { width: 6px; height: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-surface; }
+  ::-webkit-scrollbar-thumb { @apply bg-border rounded-full; }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-obsidian font-semibold px-5 py-2.5 rounded-lg
+           hover:bg-gold-lt transition-all duration-200
+           disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+  .btn-outline {
+    @apply border border-border text-text px-5 py-2.5 rounded-lg
+           hover:border-gold hover:text-gold transition-all duration-200;
+  }
+  .btn-danger {
+    @apply bg-crimson text-white font-semibold px-5 py-2.5 rounded-lg
+           hover:opacity-80 transition-all duration-200;
+  }
+  .card {
+    @apply bg-panel border border-border rounded-xl p-5;
+  }
+  .input {
+    @apply w-full bg-surface border border-border rounded-lg px-4 py-2.5 text-text
+           placeholder-muted focus:outline-none focus:border-gold transition-colors;
+  }
+  .badge-fraud {
+    @apply inline-flex items-center gap-1 bg-crimson/20 text-crimson
+           border border-crimson/30 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+  .badge-ok {
+    @apply inline-flex items-center gap-1 bg-jade/20 text-jade
+           border border-jade/30 text-xs font-medium px-2 py-0.5 rounded-full;
+  }
+}
