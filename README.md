@@ -67,6 +67,9 @@ auction-system/
 
 ---
 
+## er diagram
+https://drive.google.com/file/d/1jJoRC424NgVia1WYRwyqD5N97nOoyQva/view?usp=sharing
+
 ## Prerequisites
 
 - **Node.js** 18+ and **npm** 9+
@@ -266,3 +269,5 @@ Bid placement uses `SELECT ... FOR UPDATE` (row-level lock) inside a transaction
 ## License
 
 MIT
+
+
